@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="cuerpo">
+    <header class="header">
+        <img src="./assets/Logo.png">
+    </header>
+
+    <main class="encriptador">
+        <div class="ingreso">
+            <textarea id="text" class="input" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="aviso_botones">
+                <p class="aviso">
+                    <img src="./assets/bi_exclamation-circle-fill.png" >Solo letras minúsculas y sin acentos
+                </p>
+                <div class="container_botones">
+                 <button onclick="encriptar();" class="boton_encriptar">Encriptar</button>
+                 <button onclick="desencriptar();" class="boton_desencriptar">Desencriptar</button>
+                </div>
+            </div>
+        </div>
+        <div class="salida">
+            <img class="imagen_salida" id="temp1" src="./assets/Muñeco.png" style="width:100%">
+            <p class="texto_salida" id="texto_out" style="visibility: hidden;"></p>
+            <p class="no_message" id="temp2">Ningún mensaje fue encontrado</p>
+            <p class="ingresa_texto" id="temp3">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <div class="container_boton_salida">
+                <button onclick="copiar();" id="copy" class="boton_copiar" style="visibility: hidden;">Copiar</button>
+            </div>
+        </div>
+        
+        <script src="app.js"></script>
+
+    </main>
+
+    <footer class="footer">
+        <p>Desarrollado por OrlandoBlackie</p>
+    </footer>
+</body>
+</html>
